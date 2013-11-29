@@ -21,6 +21,9 @@
 		030656191848383200237B90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030655FB1848383200237B90 /* UIKit.framework */; };
 		030656211848383200237B90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0306561F1848383200237B90 /* InfoPlist.strings */; };
 		030656231848383200237B90 /* MOLPayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030656221848383200237B90 /* MOLPayTests.m */; };
+		0306562D1848386900237B90 /* MOLPayLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0306562C1848386900237B90 /* MOLPayLibrary.framework */; };
+		03065630184838FF00237B90 /* MolpayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0306562F184838FF00237B90 /* MolpayViewController.m */; };
+		0306563318483A6D00237B90 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0306563218483A6D00237B90 /* ThanksViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		0306561E1848383200237B90 /* MOLPayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MOLPayTests-Info.plist"; sourceTree = "<group>"; };
 		030656201848383200237B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		030656221848383200237B90 /* MOLPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOLPayTests.m; sourceTree = "<group>"; };
+		0306562C1848386900237B90 /* MOLPayLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOLPayLibrary.framework; sourceTree = "<group>"; };
+		0306562E184838FF00237B90 /* MolpayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolpayViewController.h; sourceTree = "<group>"; };
+		0306562F184838FF00237B90 /* MolpayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolpayViewController.m; sourceTree = "<group>"; };
+		0306563118483A6D00237B90 /* ThanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThanksViewController.h; sourceTree = "<group>"; };
+		0306563218483A6D00237B90 /* ThanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThanksViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			files = (
 				030655FA1848383200237B90 /* CoreGraphics.framework in Frameworks */,
 				030655FC1848383200237B90 /* UIKit.framework in Frameworks */,
+				0306562D1848386900237B90 /* MOLPayLibrary.framework in Frameworks */,
 				030655F81848383200237B90 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +121,7 @@
 		030655FD1848383200237B90 /* MOLPay */ = {
 			isa = PBXGroup;
 			children = (
+				0306562C1848386900237B90 /* MOLPayLibrary.framework */,
 				030656061848383200237B90 /* AppDelegate.h */,
 				030656071848383200237B90 /* AppDelegate.m */,
 				030656091848383200237B90 /* Main.storyboard */,
@@ -119,6 +129,10 @@
 				0306560D1848383200237B90 /* ViewController.m */,
 				0306560F1848383200237B90 /* Images.xcassets */,
 				030655FE1848383200237B90 /* Supporting Files */,
+				0306562E184838FF00237B90 /* MolpayViewController.h */,
+				0306562F184838FF00237B90 /* MolpayViewController.m */,
+				0306563118483A6D00237B90 /* ThanksViewController.h */,
+				0306563218483A6D00237B90 /* ThanksViewController.m */,
 			);
 			path = MOLPay;
 			sourceTree = "<group>";
@@ -250,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0306560E1848383200237B90 /* ViewController.m in Sources */,
+				0306563318483A6D00237B90 /* ThanksViewController.m in Sources */,
 				030656081848383200237B90 /* AppDelegate.m in Sources */,
+				03065630184838FF00237B90 /* MolpayViewController.m in Sources */,
 				030656041848383200237B90 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +394,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/fahrulazmi/Desktop/MOLPay/MOLPay,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MOLPay/MOLPay-Prefix.pch";
 				INFOPLIST_FILE = "MOLPay/MOLPay-Info.plist";
@@ -391,6 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/fahrulazmi/Desktop/MOLPay/MOLPay,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MOLPay/MOLPay-Prefix.pch";
 				INFOPLIST_FILE = "MOLPay/MOLPay-Info.plist";
