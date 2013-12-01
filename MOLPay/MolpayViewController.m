@@ -68,21 +68,24 @@
     
     // get the top most view and find the fucking stupid UIWebView
     // presented by MOLPay
-    UIWindow *topWindow = [[[UIApplication sharedApplication].windows sortedArrayUsingComparator:^NSComparisonResult(UIWindow *win1, UIWindow *win2) {
-        return win1.windowLevel - win2.windowLevel;
-    }] lastObject];
-    UIView *topView = [[topWindow subviews] lastObject];
-    
-    BOOL foundMolpay = NO;
-    for (UIView *view in [topView subviews]) {
-        if ([view isKindOfClass:[UIWebView class]]) {
-            NSLog(@"Found it!");
-            foundMolpay = YES;
-            
-            [view removeFromSuperview];
+    for (UIWindow *window in [UIApplication sharedApplication].windows){
+        UIView *topView = [[window subviews] lastObject];
+        
+        BOOL foundMolpay = NO;
+        for (UIView *view in [topView subviews]) {
+            if ([view isKindOfClass:[UIWebView class]]) {
+                NSLog(@"Found it!");
+                foundMolpay = YES;
+                
+                [view removeFromSuperview];
+                break;
+            }
+        }
+        
+        if (foundMolpay) {
+            break;
         }
     }
-    if(!foundMolpay) NSLog(@"Cannot find MOLPay");
 }
 
 - (void)didReceiveMemoryWarning
